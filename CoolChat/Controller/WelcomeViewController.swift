@@ -14,7 +14,6 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
 
         print("Ahoj jak se mas Michale")
-
     }
 
 }
