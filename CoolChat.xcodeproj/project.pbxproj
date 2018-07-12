@@ -12,7 +12,7 @@
 		CBD5248520F77B4400DACD61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBD5248420F77B4400DACD61 /* Assets.xcassets */; };
 		CBD5248820F77B4400DACD61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBD5248620F77B4400DACD61 /* LaunchScreen.storyboard */; };
 		CBD5249320F7891F00DACD61 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD5249220F7891F00DACD61 /* WelcomeViewController.swift */; };
-		CBD5249720F79CB200DACD61 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD5249620F79CB200DACD61 /* TestViewController.swift */; };
+		CBD5249520F79C6600DACD61 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD5249420F79C6600DACD61 /* ChatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		CBD5248720F77B4400DACD61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CBD5248920F77B4400DACD61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBD5249220F7891F00DACD61 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		CBD5249620F79CB200DACD61 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		CBD5249420F79C6600DACD61 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				CBD5249220F7891F00DACD61 /* WelcomeViewController.swift */,
-				CBD5249620F79CB200DACD61 /* TestViewController.swift */,
+				CBD5249420F79C6600DACD61 /* ChatViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -163,7 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBD5247E20F77B3C00DACD61 /* AppDelegate.swift in Sources */,
-				CBD5249720F79CB200DACD61 /* TestViewController.swift in Sources */,
+				CBD5249520F79C6600DACD61 /* ChatViewController.swift in Sources */,
 				CBD5249320F7891F00DACD61 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
