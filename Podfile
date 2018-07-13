@@ -7,6 +7,6 @@ target 'CoolChat' do
 
 
   pod 'Firebase/Core'
-
+  pod 'Firebase/Database'
 
 end

@@ -49,9 +49,14 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let text = input.text {
 
             let message = Message(text: text, sender: name)
-            messages.insert(message, at: 0)
+            //messages.insert(message, at: 0)
+            //tableView.reloadData()
 
-            tableView.reloadData()
+
+
+
+
+
 
             input.text = String()
         }
