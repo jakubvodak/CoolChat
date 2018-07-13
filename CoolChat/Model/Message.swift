@@ -13,11 +13,20 @@ class Message {
     let text: String
     let sender: String
 
+    var dictValue: NSDictionary {
+        get {
+            return ["jmeno": sender, "text": text]
+        }
+    }
+
     init(text: String, sender: String) {
 
         self.text = text
         self.sender = sender
 
     }
+
+
+
 
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -25,6 +26,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.tableFooterView = UIView()
 
         //nactiTestovaciData()
+        sledujDatabazi()
     }
 
     func nactiTestovaciData() {
@@ -34,6 +36,32 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let message2 = Message(text: "Nazdar", sender: "Pavel")
         messages.append(message1)
         messages.append(message2)
+    }
+
+    func sledujDatabazi() {
+
+        Database.database().reference(withPath: "Messages").observe(DataEventType.value) { [weak self] (snapshot) in
+
+            self?.messages.removeAll()
+
+            for rest in snapshot.children.allObjects as! [DataSnapshot] {
+
+                if let dict = rest.value as? [String: String],
+                    let jmeno = dict["jmeno"],
+                    let text = dict["text"] {
+
+                    let message = Message(text: text, sender: jmeno)
+                    self?.messages.insert(message, at: 0)
+                }
+            }
+
+            self?.tableView.reloadData()
+        }
+
+        Database.database().reference(withPath: "Messages/-LHIXDTYHYBXNwyn5YxF/jmeno").observe(DataEventType.value) { [weak self] (snapshot) in
+
+            print(snapshot)
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -52,11 +80,8 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
             //messages.insert(message, at: 0)
             //tableView.reloadData()
 
-
-
-
-
-
+            let trigger = Database.database().reference(withPath: "Messages").childByAutoId()
+            trigger.setValue(message.dictValue)
 
             input.text = String()
         }
@@ -89,14 +114,5 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
         return cell
     }
-
-
-
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
-
-    }
-
 
 }
