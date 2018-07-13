@@ -90,7 +90,7 @@
                                 <rect key="frame" x="0.0" y="114" width="375" height="553"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="rcM-96-bNB">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MessageTableViewCell" id="rcM-96-bNB" customClass="MessageTableViewCell" customModule="CoolChat" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rcM-96-bNB" id="0UB-xa-qQJ">
@@ -120,6 +120,10 @@
                                                 <constraint firstAttribute="trailing" secondItem="EgN-rM-M0W" secondAttribute="trailing" constant="20" id="wIa-sR-Fce"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblName" destination="Hwy-V2-Izk" id="NQO-Xp-9Q5"/>
+                                            <outlet property="lblText" destination="EgN-rM-M0W" id="CVI-kC-PAe"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>

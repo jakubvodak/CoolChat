@@ -42,12 +42,27 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
+        print("Kolik je bunek?")
+        print(messages.count)
+        print("------------")
+
         return messages.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        return UITableViewCell()
+        print("Obsah bunky")
+        print(indexPath.row)
+        print("-------------")
+
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MessageTableViewCell", for: indexPath) as! MessageTableViewCell
+
+        let message = messages[indexPath.row]
+
+        cell.lblName.text = message.sender
+        cell.lblText.text = message.text
+
+        return cell
     }
 
 }
