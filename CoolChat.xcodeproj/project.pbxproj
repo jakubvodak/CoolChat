@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63DB54FDAF1B5DF021C4241E /* Pods_CoolChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA71782940371F1A936BCF20 /* Pods_CoolChat.framework */; };
 		CBB0C19F20F89A2E007B0BF5 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0C19E20F89A2E007B0BF5 /* Message.swift */; };
 		CBB0C1A120F89FA3007B0BF5 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0C1A020F89FA3007B0BF5 /* MessageTableViewCell.swift */; };
+		CBB0C1A320F8B77D007B0BF5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CBB0C1A220F8B77D007B0BF5 /* GoogleService-Info.plist */; };
 		CBD5247E20F77B3C00DACD61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD5247D20F77B3C00DACD61 /* AppDelegate.swift */; };
 		CBD5248320F77B3C00DACD61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBD5248120F77B3C00DACD61 /* Main.storyboard */; };
 		CBD5248520F77B4400DACD61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBD5248420F77B4400DACD61 /* Assets.xcassets */; };
@@ -18,8 +20,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		44442E06BCFE157BF13AEF82 /* Pods-CoolChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoolChat/Pods-CoolChat.release.xcconfig"; sourceTree = "<group>"; };
+		A9291476758D4364BC04BB39 /* Pods-CoolChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoolChat/Pods-CoolChat.debug.xcconfig"; sourceTree = "<group>"; };
 		CBB0C19E20F89A2E007B0BF5 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		CBB0C1A020F89FA3007B0BF5 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		CBB0C1A220F8B77D007B0BF5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CBD5247A20F77B3C00DACD61 /* CoolChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoolChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD5247D20F77B3C00DACD61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBD5248220F77B3C00DACD61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -28,6 +33,7 @@
 		CBD5248920F77B4400DACD61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBD5249220F7891F00DACD61 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		CBD5249420F79C6600DACD61 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		EA71782940371F1A936BCF20 /* Pods_CoolChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoolChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63DB54FDAF1B5DF021C4241E /* Pods_CoolChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2FF1B20EF3C95D597FB4C6FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA71782940371F1A936BCF20 /* Pods_CoolChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B80F562495E29D5711EAE61D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A9291476758D4364BC04BB39 /* Pods-CoolChat.debug.xcconfig */,
+				44442E06BCFE157BF13AEF82 /* Pods-CoolChat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CBD5247120F77B3C00DACD61 = {
 			isa = PBXGroup;
 			children = (
 				CBD5247C20F77B3C00DACD61 /* CoolChat */,
 				CBD5247B20F77B3C00DACD61 /* Products */,
+				B80F562495E29D5711EAE61D /* Pods */,
+				2FF1B20EF3C95D597FB4C6FB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +94,7 @@
 				CBD5248420F77B4400DACD61 /* Assets.xcassets */,
 				CBD5248620F77B4400DACD61 /* LaunchScreen.storyboard */,
 				CBD5248920F77B4400DACD61 /* Info.plist */,
+				CBB0C1A220F8B77D007B0BF5 /* GoogleService-Info.plist */,
 			);
 			path = CoolChat;
 			sourceTree = "<group>";
@@ -104,9 +131,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CBD5248C20F77B4400DACD61 /* Build configuration list for PBXNativeTarget "CoolChat" */;
 			buildPhases = (
+				BCB5AEC24A1671C3047A0B20 /* [CP] Check Pods Manifest.lock */,
 				CBD5247620F77B3C00DACD61 /* Sources */,
 				CBD5247720F77B3C00DACD61 /* Frameworks */,
 				CBD5247820F77B3C00DACD61 /* Resources */,
+				98E37002D927C30B83AE7617 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -156,12 +185,54 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBD5248820F77B4400DACD61 /* LaunchScreen.storyboard in Resources */,
+				CBB0C1A320F8B77D007B0BF5 /* GoogleService-Info.plist in Resources */,
 				CBD5248520F77B4400DACD61 /* Assets.xcassets in Resources */,
 				CBD5248320F77B3C00DACD61 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		98E37002D927C30B83AE7617 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CoolChat/Pods-CoolChat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoolChat/Pods-CoolChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCB5AEC24A1671C3047A0B20 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoolChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CBD5247620F77B3C00DACD61 /* Sources */ = {
@@ -314,14 +385,12 @@
 		};
 		CBD5248D20F77B4400DACD61 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9291476758D4364BC04BB39 /* Pods-CoolChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CoolChat/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ict.CoolChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -331,14 +400,12 @@
 		};
 		CBD5248E20F77B4400DACD61 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44442E06BCFE157BF13AEF82 /* Pods-CoolChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CoolChat/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ict.CoolChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
