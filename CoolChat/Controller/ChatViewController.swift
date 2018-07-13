@@ -42,8 +42,6 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
         Database.database().reference(withPath: "Messages").observe(DataEventType.value) { [weak self] (snapshot) in
 
-            self?.jmeno = "John"
-
             self?.messages.removeAll()
 
             for rest in snapshot.children.allObjects as! [DataSnapshot] {
@@ -54,6 +52,10 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
                     let message = Message(text: text, sender: jmeno)
                     self?.messages.insert(message, at: 0)
+                }
+                else {
+
+                    print("Chybny zapis dat!!!")
                 }
             }
 
