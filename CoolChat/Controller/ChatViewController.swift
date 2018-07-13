@@ -8,35 +8,46 @@
 
 import UIKit
 
-class ChatViewController: UIViewController {
+class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     var jmeno: String?
+    var messages = [Message]()
 
     @IBOutlet var input: UITextField!
     @IBOutlet var sendBtn: UIButton!
+    @IBOutlet var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = jmeno
 
-        // Do any additional setup after loading the view.
+
+        // Testovaci data
+        let message1 = Message(text: "Ahoj", sender: "Jakub")
+        let message2 = Message(text: "Nazdar", sender: "Pavel")
+        messages.append(message1)
+        messages.append(message2)
+
+        tableView.tableFooterView = UIView()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
-    */
+
+    // MARK: - TableView
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
+        return messages.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        return UITableViewCell()
+    }
 
 }

@@ -123,6 +123,10 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Qg4-fj-yeF" id="7Tx-zz-qgJ"/>
+                                    <outlet property="delegate" destination="Qg4-fj-yeF" id="1vw-iw-KbI"/>
+                                </connections>
                             </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tr0-hk-0nE">
                                 <rect key="frame" x="20" y="73" width="269" height="30"/>
@@ -152,6 +156,7 @@
                     <connections>
                         <outlet property="input" destination="tr0-hk-0nE" id="pJ5-QY-Swl"/>
                         <outlet property="sendBtn" destination="wIZ-v3-6F3" id="OZb-1J-gPa"/>
+                        <outlet property="tableView" destination="mLM-Cm-gex" id="7Yd-bb-MaF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="350-cf-gsc" userLabel="First Responder" sceneMemberID="firstResponder"/>

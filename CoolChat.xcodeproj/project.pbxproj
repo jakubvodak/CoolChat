@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CBB0C19F20F89A2E007B0BF5 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0C19E20F89A2E007B0BF5 /* Message.swift */; };
 		CBD5247E20F77B3C00DACD61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD5247D20F77B3C00DACD61 /* AppDelegate.swift */; };
 		CBD5248320F77B3C00DACD61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBD5248120F77B3C00DACD61 /* Main.storyboard */; };
 		CBD5248520F77B4400DACD61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBD5248420F77B4400DACD61 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CBB0C19E20F89A2E007B0BF5 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		CBD5247A20F77B3C00DACD61 /* CoolChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoolChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD5247D20F77B3C00DACD61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBD5248220F77B3C00DACD61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 		CBD5248F20F7865800DACD61 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CBB0C19E20F89A2E007B0BF5 /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBD5247E20F77B3C00DACD61 /* AppDelegate.swift in Sources */,
+				CBB0C19F20F89A2E007B0BF5 /* Message.swift in Sources */,
 				CBD5249520F79C6600DACD61 /* ChatViewController.swift in Sources */,
 				CBD5249320F7891F00DACD61 /* WelcomeViewController.swift in Sources */,
 			);
