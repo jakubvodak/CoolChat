@@ -22,14 +22,18 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
         title = jmeno
 
+        tableView.tableFooterView = UIView()
+
+        //nactiTestovaciData()
+    }
+
+    func nactiTestovaciData() {
 
         // Testovaci data
         let message1 = Message(text: "Ahoj", sender: "Jakub")
         let message2 = Message(text: "Nazdar", sender: "Pavel")
         messages.append(message1)
         messages.append(message2)
-
-        tableView.tableFooterView = UIView()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -37,6 +41,22 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
 
     }
+
+
+    @IBAction func sendMessage() {
+
+        if let name = jmeno,
+            let text = input.text {
+
+            let message = Message(text: text, sender: name)
+            messages.insert(message, at: 0)
+
+            tableView.reloadData()
+
+            input.text = String()
+        }
+    }
+
 
     // MARK: - TableView
 
