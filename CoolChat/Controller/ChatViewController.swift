@@ -27,14 +27,6 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
         //nactiTestovaciData()
         sledujDatabazi()
-
-        self.addObserver(self, forKeyPath: "jmeno", options: NSKeyValueObservingOptions.new, context: nil)
-    }
-
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-
-        print("POKUS123")
-
     }
 
     func nactiTestovaciData() {
