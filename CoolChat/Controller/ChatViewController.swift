@@ -27,6 +27,14 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
         //nactiTestovaciData()
         sledujDatabazi()
+
+        self.addObserver(self, forKeyPath: "jmeno", options: NSKeyValueObservingOptions.new, context: nil)
+    }
+
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+
+        print("POKUS123")
+
     }
 
     func nactiTestovaciData() {
@@ -41,6 +49,8 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func sledujDatabazi() {
 
         Database.database().reference(withPath: "Messages").observe(DataEventType.value) { [weak self] (snapshot) in
+
+            self?.jmeno = "John"
 
             self?.messages.removeAll()
 
@@ -57,19 +67,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
             self?.tableView.reloadData()
         }
-
-        Database.database().reference(withPath: "Messages/-LHIXDTYHYBXNwyn5YxF/jmeno").observe(DataEventType.value) { [weak self] (snapshot) in
-
-            print(snapshot)
-        }
     }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-
-    }
-
 
     @IBAction func sendMessage() {
 
@@ -91,20 +89,20 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     // MARK: - TableView
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
+/*
         print("Kolik je bunek?")
         print(messages.count)
         print("------------")
-
+*/
         return messages.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
+/*
         print("Obsah bunky")
         print(indexPath.row)
         print("-------------")
-
+*/
         let cell = tableView.dequeueReusableCell(withIdentifier: "MessageTableViewCell", for: indexPath) as! MessageTableViewCell
 
         let message = messages[indexPath.row]

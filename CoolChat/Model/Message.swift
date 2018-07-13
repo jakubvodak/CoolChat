@@ -12,6 +12,7 @@ class Message {
 
     let text: String
     let sender: String
+    //fileprivate let sender2: String
 
     var dictValue: NSDictionary {
         get {
@@ -21,12 +22,27 @@ class Message {
 
     init(text: String, sender: String) {
 
+        print("Init")    
+
         self.text = text
         self.sender = sender
-
     }
 
+    deinit {
+        print("Deinit")
+    }
+}
 
+class VipMessage: Message {
 
+    var test: String {
+        get {
+            return self.sender
+        }
+    }
+}
 
+class TopMessage: Message {
+
+    
 }

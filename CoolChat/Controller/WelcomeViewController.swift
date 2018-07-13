@@ -18,6 +18,11 @@ class WelcomeViewController: UIViewController {
 
         let tap = UITapGestureRecognizer(target: self, action: #selector(WelcomeViewController.titleTap))
         label.addGestureRecognizer(tap)
+
+        // Ulozeni username
+        if let ulozeneJmeno = UserDefaults.standard.string(forKey: "UserName") {
+            input.text = ulozeneJmeno
+        }
     }
 
     @IBAction func titleTap() {
@@ -28,6 +33,9 @@ class WelcomeViewController: UIViewController {
 
         if let jmeno = input.text,
             let cil = segue.destination as? ChatViewController {
+
+            UserDefaults.standard.set(jmeno, forKey: "UserName")
+            UserDefaults.standard.synchronize()
 
             cil.jmeno = jmeno
         }
