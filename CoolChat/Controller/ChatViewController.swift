@@ -10,8 +10,15 @@ import UIKit
 
 class ChatViewController: UIViewController {
 
+    var jmeno: String?
+
+    @IBOutlet var input: UITextField!
+    @IBOutlet var sendBtn: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        title = jmeno
 
         // Do any additional setup after loading the view.
     }
